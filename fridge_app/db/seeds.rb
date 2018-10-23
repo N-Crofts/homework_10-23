@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Fridge.destroy_all
+
+kitchen = Fridge.create(location: "kitchen", brand: "GE", size: 21)
+

@@ -1,3 +1,11 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get 'fridges/index'
+  get 'fridges/show'
+  get 'fridges/new'
+  get 'fridges/edit'
+  resources :fridges do
+    resources :foods
+    resources :drinks
+  end
 end
+
