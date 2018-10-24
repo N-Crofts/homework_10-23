@@ -12,5 +12,11 @@ Date Added: <%= @food.created_at%>
 </div>
 
 <div>
-  <%= link_to("Eat food item", "/fridges/#{@fridge.id}/foods/#{@food.id}", method: :delete)%>
+    <%= link_to "Edit Item", "/fridges/#{@fridge.id}/foods/#{@food.id}/edit" %>
 </div>
+
+<div>
+  <%= link_to("Eat This!", "/fridges/#{@fridge.id}/foods/#{@food.id}", method: :delete)%>
+</div>
+
+<%= link_to("Back", "/fridges/#{@fridge.id}/foods") %>

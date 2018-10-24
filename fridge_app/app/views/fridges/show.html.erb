@@ -6,19 +6,24 @@
 
 <hr>
 
+<p>
+<h3>Stats:</h3>
+
 <ul>
 <li><i>Brand:</i> <%= @fridge.brand%></li>
 
 <li><i>Size:</i> <%= @fridge.size%> cbft.</li>
 </ul>
 
+</p>
+
 <a href="/fridges/">Go Back</a>
 
 
-
+<hr>
 
 <h2>Food in Fridge</h2>
 <div>
-<%= link_to("Look in the Fridge", "/fridges/#{@fridge.id}/foods")%>
+<%= link_to("Take a peak inside!", "/fridges/#{@fridge.id}/foods")%>
 </div>
 

@@ -17,14 +17,14 @@ class FoodsController < ApplicationController
   def create
     @fridge = Fridge.find(params[:fridge_id])
     @fridge.foods.create(food_params)
-    redirect_to "/fridges/#{@fridge.id}"
+    redirect_to "/fridges/#{@fridge.id}/foods"
   end
 
   def destroy
     @fridge = Fridge.find(params[:fridge_id])
     @food = Food.find(params[:id])
     @food.destroy
-    redirect_to "/fridges/#{@fridge.id}"
+    redirect_to "/fridges/#{@fridge.id}/foods"
   end
 
   def edit

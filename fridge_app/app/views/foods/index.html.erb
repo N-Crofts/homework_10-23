@@ -1,5 +1,20 @@
-Food in <%= @fridge.location %>
+<h2><%= @fridge.location %> Fridge</h2>
+
+<hr>
 
 <% @foods.map do |food| %>
-  <%=food.name%>
+    <ul>
+        <li>
+            <a href="/fridges/<%=@fridge.id%>/foods/<%=food.id%>">
+            <%= food.name %>        
+        </li>
+    </ul>
 <%end%>
+
+<div>
+<%= link_to("Add New Stuff!", "/fridges/#{@fridge.id}/foods/new") %>
+</div>
+
+<%= link_to("Back", "/fridges/#{@fridge.id}") %>
+<br>
+<a href="/fridges/">Home</a>
