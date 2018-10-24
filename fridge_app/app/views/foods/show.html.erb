@@ -1,2 +1,16 @@
-<h1>Foods#show</h1>
-<p>Find me in app/views/foods/show.html.erb</p>
+<h1><%=@food.name%></h1>
+<hr>
+
+<div>
+Weight: <%= @food.weight%>
+</div>
+<div>
+Vegan: <%= @food.vegan%>
+</div>
+<div>
+Date Added: <%= @food.created_at%>
+</div>
+
+<div>
+  <%= link_to("Eat food item", "/fridges/#{@fridge.id}/foods/#{@food.id}", method: :delete)%>
+</div>
