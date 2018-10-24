@@ -1,7 +1,13 @@
-<h1>Fridges#index</h1>
-<ul>
+<h1>Your Fridge Collection!</h1> <a href="/fridges/new">(add yet another fridge to your massive fridge collection)</a>
+
+<hr>
+
+<p>Spot Check Your Fridges!</p>
+
 <% @fridges.each do |fridge| %>
-  <li> <%= fridge.location %> </li>
-<% end %>
+<ul>
+  <li>
+  <%= link_to "#{fridge.location}", fridge_path(fridge) %>
+  </li>
 </ul>
-<p>Find me in app/views/fridges/index.html.erb</p>
+<% end %>

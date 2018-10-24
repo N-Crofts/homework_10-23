@@ -8,5 +8,12 @@
 
 Fridge.destroy_all
 
-kitchen = Fridge.create(location: "kitchen", brand: "GE", size: 21)
+kitchen = Fridge.create(location: "Kitchen", brand: "GE", size: 21)
+garage = Fridge.create(location: "Garage", brand: "Kenmore", size: 21.8)
+game_room = Fridge.create(location: "Game Room", brand: "Alienware", size: 37)
+office = Fridge.create(location: "Office", brand: "Danby", size: 3.3)
 
+
+apple = kitchen.foods.create(name: "Apple", weight: 1, vegan: true)
+milk = kitchen.foods.create(name: "Milk", weight: 2, vegan: true)
+orange = kitchen.foods.create(name: "Orange", weight: 1, vegan: true)

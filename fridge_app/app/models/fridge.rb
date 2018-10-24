@@ -1,2 +1,4 @@
 class Fridge < ApplicationRecord
-end
+    has_many :foods 
+    has_many :drinks
+  end

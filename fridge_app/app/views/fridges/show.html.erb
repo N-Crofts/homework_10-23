@@ -1,2 +1,21 @@
-<h1>Fridges#show</h1>
-<p>Find me in app/views/fridges/show.html.erb</p>
+<h1><%= @fridge.location%> Fridge</h1> 
+
+<%= link_to("Edit", "/fridges/#{@fridge.id}/edit") %>
+<br>
+<%= link_to("Delete", "/fridges/"+@fridge.id.to_s, method: :delete) %>
+
+<hr>
+
+<ul>
+<li><i>Brand:</i> <%= @fridge.brand%></li>
+
+<li><i>Size:</i> <%= @fridge.size%> cbft.</li>
+</ul>
+
+<a href="/fridges/">Go Back</a>
+
+
+
+<div>
+  <%= link_to("Show Food", "/fridges/#{@fridge.id}/food") %>
+</div>
